@@ -130,7 +130,6 @@ export default function Card(props) {
                                 unoptimized = {true}
                                 onError={(e) => {e.target.src="https://firebasestorage.googleapis.com/v0/b/justcats-24a26.appspot.com/o/cat-profile.png?alt=media&token=9c7e9afe-2231-4b72-899e-ec7ce58352f7"}}
                             />
-                            {/* <h2 className='text-lg text-center text-custom-dark font-bold'>{props.name}</h2> */}
                         </Link>
                         
                 </div>

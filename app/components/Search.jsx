@@ -60,7 +60,7 @@ export default function Search() {
 
     const userResults = searchResults.users?.map((item, index) => 
     <li key={index}>
-        <Link href={`/users/${item.name}`}>
+        <Link className='hover:bg-custom-dark' href={`/users/${item.name}`}>
             <div className='avatar'>
                 <div className='w-12 rounded-full'>
 
@@ -72,7 +72,7 @@ export default function Search() {
                 />
                 </div>
             </div>
-            <p className='text-amber-500 text-xl p-2'>
+            <p className='text-amber-500 text-xl p-2 '>
 
                 {item.name}
             </p>
@@ -81,7 +81,7 @@ export default function Search() {
 
     const postResults = searchResults.posts?.map((item, index) => 
     <li key={index}>
-        <Link href={`/posts/${item.postId}`} className='text-white text-xl'>
+        <Link href={`/posts/${item.postId}`} className='text-white text-xl hover:bg-custom-dark'>
             {item.title}
             <TimeAgo date={item.createdAt.toDate()} locale='en'/>
         </Link></li>

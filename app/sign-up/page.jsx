@@ -35,7 +35,7 @@ const SignUp = () => {
         });
           setEmail('');
           setPassword('')
-          router.push('/')
+          router.push('/sign-in')
         } else {
           alert("Username is already taken. Try another")
         }

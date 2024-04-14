@@ -7,9 +7,10 @@ import Link from 'next/link';
 import Card from './Card';
 import { db } from '../firebase/config'
 import { updateDoc, arrayUnion, doc } from 'firebase/firestore';
+
 import { MyContext } from '../MyContext';
 import { RiUserAddLine } from "react-icons/ri";
-
+import {toast} from 'react-toastify'
 
 export default function UserPage({ data, user }) {
     
@@ -32,7 +33,7 @@ export default function UserPage({ data, user }) {
             await updateDoc(userDocRef, {
                 notifications: arrayUnion({ type: 'friendRequest', friendUid: userData.uid, friendName: name})
             });
-            
+            toast('Friend request sent.')
         } catch (error) {
             console.error('Error updating document:', error);
         }

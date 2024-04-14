@@ -74,11 +74,13 @@ export default function PostForm(props) {
 
                 <div className='w-16 rounded-xl'>
                     <Image
-                        src={`https://firebasestorage.googleapis.com/v0/b/justcats-24a26.appspot.com/o/${user.uid}_avatar?alt=media&token=def9f697-f938-4c47-b085-e66ba888d929`}
+                        src={`https://firebasestorage.googleapis.com/v0/b/justcats-24a26.appspot.com/o/${props.uid}_avatar?alt=media&token=def9f697-f938-4c47-b085-e66ba888d929`}
                         width={100}
                         height={30}
                         className='object-cover rounded-full'
                         alt='avatar'
+                        unoptimized = {true}
+                        onError={(e) => {e.target.src="https://firebasestorage.googleapis.com/v0/b/justcats-24a26.appspot.com/o/cat-profile.png?alt=media&token=9c7e9afe-2231-4b72-899e-ec7ce58352f7"}}
                     />
                 </div>
             </div>
